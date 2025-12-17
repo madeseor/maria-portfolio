@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Retro-cute pastel palette */
+    --background: 38 100% 95%; /* #FFF6E5 cream */
+    --foreground: 0 3% 4%; /* #070606 black */
+
+    --card: 38 100% 95%;
+    --card-foreground: 0 3% 4%;
+
+    --popover: 38 100% 95%;
+    --popover-foreground: 0 3% 4%;
+
+    --primary: 330 96% 87%; /* #FEC1E8 pink */
+    --primary-foreground: 0 3% 4%;
+
+    --secondary: 350 67% 94%; /* #FAE6E7 light pink */
+    --secondary-foreground: 0 3% 4%;
+
+    --muted: 20 98% 88%; /* #FEE1C4 peach */
+    --muted-foreground: 0 3% 25%;
+
+    --accent: 340 95% 90%; /* #FED8E7 medium pink */
+    --accent-foreground: 0 3% 4%;
+
+    --destructive: 11 82% 54%; /* #E8532D red */
+    --destructive-foreground: 38 100% 95%;
+
+    --success: 152 84% 27%; /* #0A7D4D green */
+    --success-foreground: 38 100% 95%;
+
+    --border: 0 3% 4%;
+    --input: 0 3% 4%;
+    --ring: 330 96% 87%;
+
+    --radius: 1rem;
+
+    /* Custom design tokens */
+    --sticker-shadow: 4px 4px 0px hsl(0 3% 4%);
+    --sticker-shadow-hover: 6px 6px 0px hsl(0 3% 4%);
+    --sticker-border: 3px solid hsl(0 3% 4%);
+    --font-display: 'Fredoka', sans-serif;
+    --font-script: 'Pacifico', cursive;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  .dark {
+    --background: 0 3% 10%;
+    --foreground: 38 100% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  /* Sticker card style */
+  .sticker-card {
+    @apply bg-card rounded-2xl p-6 transition-all duration-300;
+    border: var(--sticker-border);
+    box-shadow: var(--sticker-shadow);
+  }
+
+  .sticker-card:hover {
+    transform: translateY(-4px) rotate(-1deg);
+    box-shadow: var(--sticker-shadow-hover);
+  }
+
+  /* Sticker button base */
+  .sticker-btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-lg transition-all duration-200;
+    border: var(--sticker-border);
+    box-shadow: var(--sticker-shadow);
+  }
+
+  .sticker-btn:hover {
+    transform: translateY(-2px) rotate(2deg);
+    box-shadow: var(--sticker-shadow-hover);
+  }
+
+  .sticker-btn:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0px hsl(0 3% 4%);
+  }
+
+  .sticker-btn:focus-visible {
+    @apply outline-none ring-4 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Badge style */
+  .sticker-badge {
+    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-display font-medium text-sm;
+    border: 2px solid hsl(var(--foreground));
+    box-shadow: 2px 2px 0px hsl(var(--foreground));
+  }
+
+  /* Halftone pattern overlay */
+  .halftone-overlay {
+    background-image: radial-gradient(circle, hsl(var(--foreground) / 0.03) 1px, transparent 1px);
+    background-size: 8px 8px;
+  }
+
+  /* Grain texture */
+  .grain-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Script text */
+  .font-script {
+    font-family: var(--font-script);
+  }
+
+  /* Display font */
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  /* Scroll animation classes */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(-2deg); }
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 5s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  /* Wiggle animation for hover */
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  .hover\:animate-wiggle:hover {
+    animation: wiggle 0.3s ease-in-out;
+  }
+
+  /* Sparkle animation */
+  @keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .animate-sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
