@@ -41,11 +41,11 @@ export const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto justify-items-center">
-
+          <div className="grid place-items-center gap-8 max-w-5xl mx-auto">
             {/* Contact info */}
             <div className="space-y-6">
-              <div className="sticker-card">
+              <div className="sticker-card w-full max-w-md">
+
                 <h3 className="font-display text-xl font-bold mb-6 flex items-center gap-2">
                   <Smiley className="w-8 h-8" />
                   Let’s Connect
