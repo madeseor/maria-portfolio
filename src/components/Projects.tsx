@@ -8,13 +8,13 @@ const categories = ['Todos', 'Web App', 'Landing Page', 'Desing'];
 const projects = [
   {
     id: 1,
-    title: 'Landing Page Mockups – Figma',
+    title: 'Corporate Landing Page Mockups – Figma',
     description: 'Created high-fidelity landing page mockups in Figma with responsive layouts, ilustrations and a consistent visual identity.',
     category: 'Desing',
     tech: ['Figma', 'Adobe Illustrator'],
     image: null,
     github: '[GITHUB]',
-    demo: '#',
+    demo: 'https://www.figma.com/proto/yljS1n3H7Qoup2bD2tMsjX/K-B?node-id=26-434&starting-point-node-id=26%3A434&t=ILzJiTsHardYpSva-1',
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const projects = [
     tech: ['Figma', 'Wix Classic'],
     image: null,
     github: '[GITHUB]',
-    demo: '#',
+    demo: 'https://www.kandbworld.com/',
   },
    {
     id: 3,
@@ -34,7 +34,7 @@ const projects = [
     tech: ['Figma', 'Azure DevOps' ],
     image: null,
     github: '[GITHUB]',
-    demo: '#',
+    demo: 'https://www.figma.com/proto/vdJbTm3sB8cdNGB6iFZBak/PetStore-EP15-P5F5?node-id=102-622&starting-point-node-id=102%3A622&t=7tiIMF0oJ2SofrMs-1',
   },
   {
     id: 4,
@@ -43,7 +43,6 @@ const projects = [
     category: 'Web App',
     tech: ['Softr', 'Airtable', 'Bettermode'],
     image: null,
-    github: '[GITHUB]',
     demo: '#',
   },
 ];

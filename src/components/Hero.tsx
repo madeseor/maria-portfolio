@@ -57,7 +57,7 @@ export const Hero = () => {
               Proyects
             </button>
             
-            <a href="[GITHUB]" target="_blank" rel="noopener noreferrer" className="sticker-btn bg-foreground text-background">
+            <a href="https://github.com/madeseor" target="_blank" rel="noopener noreferrer" className="sticker-btn bg-foreground text-background">
               <Github className="w-5 h-5" />
               GitHub
             </a>
