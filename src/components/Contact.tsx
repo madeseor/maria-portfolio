@@ -14,56 +14,6 @@ export const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      setIsSubmitting(true);
-
-      try {
-        const res = await fetch("https://formspree.io/f/mdkqqegd", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-
-        if (res.ok) {
-          toast({
-            title: "Mensaje enviado! ✅",
-            description: "Gracias por escribirme, te responderé pronto.",
-          });
-          setFormData({ name: "", email: "", message: "" });
-        } else {
-          toast({
-            title: "No se pudo enviar 😢",
-            description: "Intenta de nuevo en unos segundos.",
-            variant: "destructive",
-          });
-        }
-      } catch (error) {
-        toast({
-          title: "Error de conexión 😢",
-          description: "Revisa tu internet e intenta de nuevo.",
-          variant: "destructive",
-        });
-      } finally {
-        setIsSubmitting(false);
-      }
-    };
-
-
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
 
   return (
     <section id="contacto" className="py-20 relative overflow-hidden">
@@ -156,78 +106,6 @@ export const Contact = () => {
                 </div>
               </div>
             </div>
-
-            {/* Contact form */}
-            <form onSubmit={handleSubmit} className="sticker-card">
-              <h3 className="font-display text-xl font-bold mb-6">
-                📬 Send Me a Message
-              </h3>
-
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block font-display font-semibold text-sm mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-foreground bg-background font-body focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block font-display font-semibold text-sm mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-foreground bg-background font-body focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all"
-                    placeholder="you@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block font-display font-semibold text-sm mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-foreground bg-background font-body resize-none focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all"
-                    placeholder="Hi! I’d like to talk with you about…"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="sticker-btn w-full bg-destructive text-destructive-foreground disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    'Enviando...'
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      Send Message
-                    </>
-                  )}
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       </div>
