@@ -18,13 +18,41 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setIsSubmitting(true);
 
-    toast({
-      title: "¡Mensaje enviado! 🎉",
-      description: "Gracias por contactarme. Te responderé pronto.",
-    });
+      try {
+        const res = await fetch("https://formspree.io/f/mdkqqegd", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (res.ok) {
+          toast({
+            title: "Mensaje enviado! ✅",
+            description: "Gracias por escribirme, te responderé pronto.",
+          });
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          toast({
+            title: "No se pudo enviar 😢",
+            description: "Intenta de nuevo en unos segundos.",
+            variant: "destructive",
+          });
+        }
+      } catch (error) {
+        toast({
+          title: "Error de conexión 😢",
+          description: "Revisa tu internet e intenta de nuevo.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
+
 
     setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
