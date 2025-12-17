@@ -9,7 +9,7 @@ const skills = [
   { name: 'Figma', level: 75, color: 'bg-accent' },
   { name: 'Wix', level: 85, color: 'bg-secondary' },
   { name: 'Git & GitHub', level: 75, color: 'bg-primary' },
-  { name: 'Java', level: 65, color: 'bg-muted' },
+  { name: 'Java', level: 80, color: 'bg-muted' },
 ];
 
 const tools = [
