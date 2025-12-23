@@ -54,7 +54,7 @@ export const Hero = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button onClick={scrollToProjects} className="sticker-btn bg-destructive text-destructive-foreground">
               <ArrowDown className="w-5 h-5" />
-              Proyects
+              Projects
             </button>
             
             <a href="https://github.com/madeseor" target="_blank" rel="noopener noreferrer" className="sticker-btn bg-foreground text-background">

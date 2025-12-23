@@ -7,7 +7,7 @@ const skills = [
   { name: 'HTML', level: 80, color: 'bg-muted' },
   { name: 'Azure DevOps', level: 70, color: 'bg-success' },
   { name: 'Figma', level: 75, color: 'bg-accent' },
-  { name: 'Wix', level: 85, color: 'bg-secondary' },
+  { name: 'React', level: 70, color: 'bg-secondary' },
   { name: 'Git & GitHub', level: 75, color: 'bg-primary' },
   { name: 'Java', level: 80, color: 'bg-muted' },
 ];

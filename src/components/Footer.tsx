@@ -25,7 +25,7 @@ export const Footer = () => {
           {/* Social links */}
           <div className="flex gap-3">
             <a
-              href="[GITHUB]"
+              href="https://github.com/madeseor"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-background/10 hover:bg-background/20 border-2 border-background/30 transition-all hover:scale-110"
@@ -34,20 +34,13 @@ export const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="[LINKEDIN]"
+              href="https://www.linkedin.com/in/maria-segura-ortiz/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-background/10 hover:bg-background/20 border-2 border-background/30 transition-all hover:scale-110"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="mailto:[EMAIL]"
-              className="p-3 rounded-full bg-background/10 hover:bg-background/20 border-2 border-background/30 transition-all hover:scale-110"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
             </a>
           </div>
 

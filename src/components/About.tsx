@@ -49,11 +49,12 @@ export const About = () => {
           <div className="space-y-6">
             <div className="sticker-card bg-card">
               <p className="font-body text-lg leading-relaxed text-foreground mb-6">
-                Hi! I’m a <span className="font-semibold text-destructive">Systems Engineering student</span> with
-                a strong passion for web development and interface design. I enjoy transforming ideas into
+                Hi! I’m a <span className="font-semibold text-destructive">Systems Engineering student</span> currently
+                in my fifth semester,with a strong passion for web development and interface design. I enjoy transforming ideas into
                 digital experiences that are both <span className="font-semibold text-success">functional</span> and{' '}
-                <span className="font-semibold">visually appealing</span>.
+                <span className="font-semibold">visually appealing.</span>.
               </p>
+              <p>I hold both Colombian and Spanish nationality, which allows me to work in different parts of the world. I stay up to date with new technologies and continuously learn to build modern, user-centered web applications.</p>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -70,7 +71,7 @@ export const About = () => {
 
                 <div className="flex items-center gap-3">
                   <span className="sticker-badge bg-accent !py-1.5"><Heart className="w-4 h-4" />
-                    Js & UI/UX
+                    JavaScript & React
                   </span>
                 </div>
               </div>

@@ -11,7 +11,7 @@ const projects = [
     title: 'Corporate Landing Page Mockups – Figma',
     description: 'Created high-fidelity landing page mockups in Figma with responsive layouts, ilustrations and a consistent visual identity.',
     category: 'Desing',
-    tech: ['Figma', 'Adobe Illustrator'],
+    tech: ['UI/UX ','Figma', 'Adobe Illustrator'],
     image: null,
     github: '[GITHUB]',
     demo: 'https://www.figma.com/proto/yljS1n3H7Qoup2bD2tMsjX/K-B?node-id=26-434&starting-point-node-id=26%3A434&t=ILzJiTsHardYpSva-1',
@@ -21,7 +21,7 @@ const projects = [
     title: 'Landing Page Development – Wix',
     description: 'Designed and developed a responsive landing page in Wix, focused on clear content structure and usability.',
     category: 'Landing Page',
-    tech: ['Figma', 'Wix Classic'],
+    tech: ['UI/UX ','Figma', 'Wix Classic'],
     image: null,
     github: '[GITHUB]',
     demo: 'https://www.kandbworld.com/',
@@ -31,7 +31,7 @@ const projects = [
     title: 'Pet Store - Academic Proyect',
     description: 'Developed UI mockups in Figma as part of an academic SCRUM project, serving as Product Owner and managing tasks through Azure DevOps.',
     category: 'Desing',
-    tech: ['Figma', 'Azure DevOps' ],
+    tech: ['UI/UX ','Figma', 'Azure DevOps' ],
     image: null,
     github: '[GITHUB]',
     demo: 'https://www.figma.com/proto/vdJbTm3sB8cdNGB6iFZBak/PetStore-EP15-P5F5?node-id=102-622&starting-point-node-id=102%3A622&t=7tiIMF0oJ2SofrMs-1',
@@ -74,7 +74,7 @@ export const Projects = () => {
               My Work
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
-              Proyects
+              Projects
             </h2>
           </div>
 

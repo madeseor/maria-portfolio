@@ -76,7 +76,7 @@ export const Contact = () => {
                     </span>
                     <div>
                       <p className="font-display font-semibold text-sm">LinkedIn</p>
-                      <p className="font-body text-sm text-muted-foreground">/in/[tu-usuario]</p>
+                      <p className="font-body text-sm text-muted-foreground">/in/maria-segura-ortiz</p>
                     </div>
                   </a>
 
