@@ -53,7 +53,7 @@ export const Contact = () => {
 
                 <div className="space-y-4">
                   <a
-                    href="mailto:[EMAIL]"
+                    href="mailto:https://mail.google.com/"
                     className="flex items-center gap-3 p-3 rounded-xl bg-secondary hover:bg-primary transition-colors group"
                   >
                     <span className="p-2 bg-destructive/20 rounded-lg border-2 border-foreground">
@@ -66,7 +66,7 @@ export const Contact = () => {
                   </a>
 
                   <a
-                    href="[LINKEDIN]"
+                    href="https://www.linkedin.com/in/maria-segura-ortiz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 rounded-xl bg-secondary hover:bg-primary transition-colors"
@@ -81,7 +81,7 @@ export const Contact = () => {
                   </a>
 
                   <a
-                    href="[GITHUB]"
+                    href="https://github.com/madeseor"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 rounded-xl bg-secondary hover:bg-primary transition-colors"

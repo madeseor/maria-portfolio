@@ -16,6 +16,13 @@ const certificates = [
     issuer: 'Udemy',
     date: '2025',
     credential: '',
+  },
+  {
+    id: 3,
+    title: 'React + Next.js + Node.js',
+    issuer: 'Udemy',
+    date: '2025',
+    credential: '',
   }
 ];
 
