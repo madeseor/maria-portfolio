@@ -13,7 +13,6 @@ const projects = [
     category: 'Desing',
     tech: ['UI/UX ','Figma', 'Adobe Illustrator'],
     image: null,
-    github: '[GITHUB]',
     demo: 'https://www.figma.com/proto/yljS1n3H7Qoup2bD2tMsjX/K-B?node-id=26-434&starting-point-node-id=26%3A434&t=ILzJiTsHardYpSva-1',
   },
   {
@@ -23,7 +22,6 @@ const projects = [
     category: 'Landing Page',
     tech: ['UI/UX ','Figma', 'Wix Classic'],
     image: null,
-    github: '[GITHUB]',
     demo: 'https://www.kandbworld.com/',
   },
    {
@@ -33,7 +31,6 @@ const projects = [
     category: 'Desing',
     tech: ['UI/UX ','Figma', 'Azure DevOps' ],
     image: null,
-    github: '[GITHUB]',
     demo: 'https://www.figma.com/proto/vdJbTm3sB8cdNGB6iFZBak/PetStore-EP15-P5F5?node-id=102-622&starting-point-node-id=102%3A622&t=7tiIMF0oJ2SofrMs-1',
   },
   {
@@ -42,8 +39,6 @@ const projects = [
     description: 'Designed and built responsive web pages for a corporate website using Softr, following brand guidelines.',
     category: 'Web App',
     tech: ['Softr', 'Airtable', 'Bettermode'],
-    image: null,
-    demo: '#',
   },
 ];
 
@@ -131,15 +126,7 @@ export const Projects = () => {
 
                 {/* Links */}
                 <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="sticker-btn !px-4 !py-2 !text-sm bg-foreground text-background"
-                  >
-                    <Github className="w-4 h-4" />
-                    Código
-                  </a>
+                  {index !== filteredProjects.length - 1 && (
                   <a
                     href={project.demo}
                     target="_blank"
@@ -147,8 +134,9 @@ export const Projects = () => {
                     className="sticker-btn !px-4 !py-2 !text-sm bg-success text-success-foreground"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Demo
+                    View
                   </a>
+                  )}
                 </div>
               </article>
             ))}
