@@ -5,15 +5,15 @@ const skills = [
   { name: 'JavaScript', level: 90, color: 'bg-destructive' },
   { name: 'CSS', level: 85, color: 'bg-primary' },
   { name: 'HTML', level: 80, color: 'bg-muted' },
-  { name: 'Azure DevOps', level: 70, color: 'bg-success' },
+  { name: 'Python', level: 95, color: 'bg-success' },
   { name: 'Figma', level: 75, color: 'bg-accent' },
-  { name: 'React', level: 70, color: 'bg-secondary' },
-  { name: 'Git & GitHub', level: 75, color: 'bg-primary' },
+  { name: 'React', level: 75, color: 'bg-secondary' },
+  { name: 'Git & GitHub', level: 80, color: 'bg-primary' },
   { name: 'Java', level: 80, color: 'bg-muted' },
 ];
 
 const tools = [
-  'VS Code + Git', 'Learning: DevTools', 'Vercel', 'Softr', 'Notion', 'Slack'
+  'VS Code + Git', 'Learning: DevTools', 'Vercel', 'Softr', 'Azure DevOps', 'Slack'
 ];
 
 export const Skills = () => {

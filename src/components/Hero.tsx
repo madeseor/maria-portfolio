@@ -39,7 +39,7 @@ export const Hero = () => {
 
           {/* Script subtitle */}
           <p className="font-script text-2xl md:text-4xl text-success mb-6">
-            Front-End Developer
+            Full-Stack  Developer
           </p>
 
           {/* Description */}
